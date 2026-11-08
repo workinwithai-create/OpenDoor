@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OpenDoor — four-bar door desk</title>
+  <meta name="description" content="Four live-instrument bars that open the door into the hook. Then the hook lands." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>OpenDoor</h1>
+  <p class="lead">Four-bar door desk. Generators dump the verse into the hook. Session players write four live bars that open the door — sparse hold, rising figure, kit open — then the hook lands. Live piano, upright, nylon, kit, trumpet, violin. Not a last-chorus tag. Not a two-bar lift. Not an eight-bar pre.</p>
+  <p class="status" id="status">Seating chairs…</p>
+  <p class="eyebrow">Your settings</p>
+  <div class="row">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="98" /></label>
+    <label>Key <select id="key"><option>A minor</option><option>E major</option><option>D minor</option><option>C major</option></select></label>
+    <label>Bars <input type="number" id="bars" min="4" max="16" value="12" /></label>
+  </div>
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Door</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · verse 1–8 · door 9–12</p>
+  <div class="bars" id="barsDisplay"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+  <p class="status" id="exportStatus"></p>
+</main>
+<div class="dock">
+  <button id="playA">A · Verse loop</button>
+  <button id="playB">B · Full form</button>
+  <button id="play8">8 · Door only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="exportWav">Export WAV</button>
+  <button class="ghost" id="exportMid">Export MIDI</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
